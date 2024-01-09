@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "" => "todos#index"
+  get "todos" => "todos#index"
+  post "todos" => "todos#addTodo"
+  delete "todos/:id" => "todos#deleteTodo"
 end
